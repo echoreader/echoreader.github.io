@@ -1,8 +1,6 @@
 ---
 title:  "Echo Reader Blogspot"
-mathjax: true
 layout: post
-categories: media
 ---
 
 # Discover My Amazing Blogs!
