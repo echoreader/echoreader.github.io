@@ -1,3 +1,10 @@
+---
+title:  "Echo Reader Blogspot"
+mathjax: true
+layout: post
+categories: media
+---
+
 # Discover My Amazing Blogs!
 
 Welcome to a world of inspiration, creativity, and knowledge! Explore my diverse range of blogs and find topics that spark your interest. Here's what we have for you:
