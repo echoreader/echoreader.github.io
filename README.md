@@ -29,6 +29,16 @@ Just fork this [repository](https://github.com/niklasbuschmann/contrast) and adj
 - [Font Awesome](http://fontawesome.io/)
 - [KaTeX](https://katex.org/)
 - [Pygments](https://github.com/richleland/pygments-css)
+- [Pure Glow Health](https://pureglowhealth.blogspot.com/)
+- [Investify Guide](https://investifyguide.blogspot.com/)
+- [Born Craft](https://borncraft.blogspot.com/)
+- [Saves Leaves](https://savesleaves.blogspot.com/)
+- [Cook Many Recipe](https://cookmanyrecipe.blogspot.com/)
+- [Grown Fit](https://grownfit.blogspot.com/)
+- [Hustle Crafted](https://hustlecrafted.blogspot.com/)
+- [Digital Footstep](https://digitalfootstep.blogspot.com/)
+- [Gear Genius Hub](https://geargeniushub.blogspot.com/)
+- [Globe Trail Adventures](https://globetrailadventures.blogspot.com/)
 
 ## Installation (jekyll-remote-theme method)
 
