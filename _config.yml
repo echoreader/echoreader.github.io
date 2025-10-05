@@ -1,6 +1,6 @@
-title: "Blog Echo Reader"
+title: "Echo Reader"
 author: "Echo Reader"
-description: "Made with <b style=\"color: #f45;\">&lt;3</b>"
+description: "Echo Reader a passionate blog writer dedicated to sharing meaningful stories and perspectives across diverse niches"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
