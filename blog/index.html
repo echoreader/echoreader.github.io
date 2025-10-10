@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Blog"
+---
+
+<section class="blog-list">
+  <h1>All Posts</h1>
+
+  {% for post in paginator.posts %}
+    <article class="post-snippet">
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="post-date">{{ post.date | date: site.date_format }}</p>
+      <p class="post-excerpt">
+        {{ post.content | strip_html | truncatewords: 30 }}
+      </p>
+    </article>
+  {% endfor %}
+
+  <nav class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Previous</a>
+    {% endif %}
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+    {% endif %}
+  </nav>
+</section>

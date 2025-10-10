@@ -1,0 +1,139 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Sticky header */
+header {
+  position: sticky;
+  top: 0;
+  background: #e0e0e0; /* abu-abu terang */
+  padding: 1em;
+  z-index: 1000;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+.site-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+/* Menu styling */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 0.5em;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #0077cc;
+}
+
+/* Content area */
+main {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+/* Footer styling */
+footer {
+  background: #111; /* hitam elegan */
+  color: #ccc;
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 0.9em;
+  border-top: 1px solid #333;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 0.5em;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .site-title {
+    font-size: 1.2em;
+  }
+
+  main {
+    margin: 1em auto;
+    padding: 0 1em;
+  }
+}
+
+.post-snippet {
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #ddd;
+}
+
+.post-snippet h2 {
+  font-size: 1.4em;
+  margin-bottom: 0.3em;
+}
+
+.post-snippet a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.post-snippet a:hover {
+  text-decoration: underline;
+}
+
+.post-date {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 0.5em;
+}
+
+.post-excerpt {
+  font-size: 1em;
+  color: #444;
+}

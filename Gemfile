@@ -2,7 +2,17 @@ source "https://rubygems.org"
 
 gem "jekyll", "~> 4.2.0"
 gem "webrick", "~> 1.7"
+gem 'csv'
+gem 'logger'
+gem 'base64', require: false
+gem 'bigdecimal', require: false
+gem 'jekyll-gist'
+gem 'jekyll-paginate'
+gem 'jekyll-sitemap'
 
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem 'jekyll-feed'
+  gem 'jekyll-gist'
+  gem 'jekyll-paginate'
+  gem 'jekyll-sitemap'
 end
