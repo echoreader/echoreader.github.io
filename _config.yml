@@ -18,6 +18,7 @@ nav:
     url: "/about/"
 
 plugins:
+
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
@@ -28,3 +29,4 @@ paginate_path: "/blog/page:num/"
 
 include:
   - assets
+
