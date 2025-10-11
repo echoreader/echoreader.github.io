@@ -9,6 +9,7 @@ gem 'bigdecimal', require: false
 gem 'jekyll-gist'
 gem 'jekyll-paginate'
 gem 'jekyll-sitemap'
+gem "jekyll-seo-tag"
 
 group :jekyll_plugins do
   gem 'jekyll-feed'
