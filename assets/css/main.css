@@ -1,4 +1,6 @@
-/* Reset & base */
+/* ================================
+   🔁 RESET & BASE STYLING
+   ================================ */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +14,10 @@ body {
   line-height: 1.6;
 }
 
-/* Sticky header */
+
+/* ================================
+   📌 GLOBAL LAYOUT: HEADER & NAV
+   ================================ */
 header {
   position: sticky;
   top: 0;
@@ -30,7 +35,6 @@ header {
   margin: 0 auto;
 }
 
-
 .site-title {
   font-size: 1.5em;
   font-weight: bold;
@@ -41,7 +45,6 @@ header {
   margin-bottom: 0.5em;
 }
 
-/* Menu styling */
 nav ul {
   list-style: none;
   display: flex;
@@ -63,14 +66,20 @@ nav a:hover {
   color: #0077cc;
 }
 
-/* Content area */
+
+/* ================================
+   📄 PAGE LAYOUT (main content)
+   ================================ */
 main {
   max-width: 800px;
   margin: 2em auto;
   padding: 0 1em;
 }
 
-/* Footer styling */
+
+/* ================================
+   🧭 FOOTER STYLING
+   ================================ */
 footer {
   background: #111; /* hitam elegan */
   color: #ccc;
@@ -90,31 +99,18 @@ footer a:hover {
   color: #fff;
 }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 1em;
-  }
 
-  .site-title {
-    font-size: 1.2em;
-  }
-
-  main {
-    margin: 1em auto;
-    padding: 0 1em;
-  }
-}
-
+/* ================================
+   📚 ALL POSTS LOOP (.post-snippet)
+   ================================ */
 .post-snippet {
-  margin-bottom: 2em;
+  margin-bottom: 1.25em;
   padding-bottom: 1em;
   border-bottom: 1px solid #ddd;
 }
 
 .post-snippet h2 {
-  font-size: 1.4em;
+  font-size: 1.3em;
   margin-bottom: 0.3em;
 }
 
@@ -136,4 +132,133 @@ footer a:hover {
 .post-excerpt {
   font-size: 1em;
   color: #444;
+}
+
+
+/* ================================
+   📝 SINGLE POST CONTENT (article)
+   ================================ */
+article {
+  max-width: 800px;
+  margin: auto;
+  padding: 1.25rem 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Headings */
+article h1,
+article h2,
+article h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #222;
+}
+
+/* Paragraphs */
+article p {
+  margin-bottom: 1rem;
+}
+
+/* Lists */
+article ul,
+article ol {
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+}
+
+article li {
+  margin-bottom: 0.4rem;
+}
+
+/* Tables */
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.25rem;
+  overflow-x: auto;
+  display: block;
+}
+
+article th,
+article td {
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+  text-align: left;
+  word-break: break-word;
+}
+
+article th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
+
+article td {
+  background-color: #fff;
+}
+
+
+/* ================================
+   📱 MOBILE STYLING ONLY
+   ================================ */
+@media (max-width: 768px) {
+  /* Header & Nav */
+  nav ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .site-title {
+    font-size: 1.2em;
+  }
+
+  main {
+    margin: 1em auto;
+    padding: 0 1em;
+  }
+
+  /* Article */
+  article {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  article h1,
+  article h2,
+  article h3 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.4rem;
+    font-size: 1.3rem;
+  }
+
+  article p,
+  article ul,
+  article ol {
+    margin-bottom: 0.8rem;
+  }
+
+  article li {
+    margin-bottom: 0.3rem;
+  }
+
+  article table {
+    font-size: 0.95rem;
+  }
+
+  /* Post Snippet */
+  .post-snippet {
+    margin-bottom: 1.25em;
+    padding-bottom: 0.75em;
+  }
+
+  .post-snippet h2 {
+    font-size: 1.15em;
+  }
+
+  .post-excerpt {
+    font-size: 0.95em;
+  }
 }
