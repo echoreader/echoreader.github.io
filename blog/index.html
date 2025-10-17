@@ -26,3 +26,22 @@ description: "Explore curated posts on finance, careers, and tech supporting Inv
     {% endif %}
   </nav>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Echo Reader Blog – Finance, Careers & Tech",
+  "description": "Explore curated posts on finance, careers, and tech supporting Investify Guide, Hustle Crafted, and Gear Genius Hub.",
+  "url": "{{ page.url | absolute_url }}",
+  "itemListElement": [
+    {% for post in paginator.posts %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "url": "{{ post.url | absolute_url }}"
+    }{% if forloop.last == false %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
