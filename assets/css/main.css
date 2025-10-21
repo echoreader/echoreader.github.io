@@ -1,6 +1,6 @@
-/* ================================
-   🔁 RESET & BASE STYLING
-   ================================ */
+/* ====================================
+🔁 RESET & BASE STYLING
+==================================== */
 * {
   margin: 0;
   padding: 0;
@@ -15,46 +15,70 @@ body {
 }
 
 
-/* ================================
-   📌 GLOBAL LAYOUT: HEADER & NAV
-   ================================ */
+/* ====================================
+📌 GLOBAL HEADER & NAVIGATION
+==================================== */
 header {
   position: sticky;
   top: 0;
-  background: #e0e0e0; /* abu-abu terang */
+  background: #e0e0e0;
   padding: 1em;
   z-index: 1000;
   border-bottom: 1px solid #ccc;
 }
 
-.header-inner {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0.5em 0;
 }
 
-.site-title {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #333;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  margin-bottom: 0.5em;
-}
-
-nav ul {
-  list-style: none;
+.navbar-top {
   display: flex;
-  justify-content: center;
-  gap: 2em;
-  padding: 0;
-  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-nav a {
+
+.nav-brand .site-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #151515;
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 24px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  margin: 1em 0 0;
+  padding: 0;
+}
+
+.nav-link {
   text-decoration: none;
   color: #333;
   font-weight: bold;
@@ -62,14 +86,14 @@ nav a {
   transition: color 0.2s ease;
 }
 
-nav a:hover {
+.nav-link:hover {
   color: #0077cc;
 }
 
 
-/* ================================
-   📄 PAGE LAYOUT (main content)
-   ================================ */
+/* ====================================
+📄 MAIN CONTENT AREA
+==================================== */
 main {
   max-width: 800px;
   margin: 2em auto;
@@ -77,32 +101,9 @@ main {
 }
 
 
-/* ================================
-   🧭 FOOTER STYLING
-   ================================ */
-footer {
-  background: #111; /* hitam elegan */
-  color: #ccc;
-  text-align: center;
-  padding: 2em 1em;
-  font-size: 0.9em;
-  border-top: 1px solid #333;
-}
-
-footer a {
-  color: #ccc;
-  text-decoration: none;
-  margin: 0 0.5em;
-}
-
-footer a:hover {
-  color: #fff;
-}
-
-
-/* ================================
-   📚 ALL POSTS LOOP (.post-snippet)
-   ================================ */
+/* ====================================
+📚 POST LISTING (.post-snippet)
+==================================== */
 .post-snippet {
   margin-bottom: 1.25em;
   padding-bottom: 1em;
@@ -135,9 +136,9 @@ footer a:hover {
 }
 
 
-/* ================================
-   📝 SINGLE POST CONTENT (article)
-   ================================ */
+/* ====================================
+📝 SINGLE POST CONTENT (article)
+==================================== */
 article {
   max-width: 800px;
   margin: auto;
@@ -147,7 +148,6 @@ article {
   color: #333;
 }
 
-/* Headings */
 article h1,
 article h2,
 article h3 {
@@ -158,12 +158,10 @@ article h3 {
   color: #222;
 }
 
-/* Paragraphs */
 article p {
   margin-bottom: 1rem;
 }
 
-/* Lists */
 article ul,
 article ol {
   margin-bottom: 1rem;
@@ -174,7 +172,6 @@ article li {
   margin-bottom: 0.4rem;
 }
 
-/* Tables */
 article table {
   width: 100%;
   border-collapse: collapse;
@@ -201,17 +198,106 @@ article td {
 }
 
 
-/* ================================
-   📱 MOBILE STYLING ONLY
-   ================================ */
+/* ====================================
+🧭 FOOTER STYLING
+==================================== */
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 0.9em;
+  border-top: 1px solid #333;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 0.5em;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.site-footer {
+  background: #111;
+  color: #ccc;
+  padding: 2em 1em;
+  font-size: 0.9em;
+  border-top: 1px solid #333;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 1em;
+}
+
+.footer-left p,
+.footer-right p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.footer-right a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.footer-right a:hover {
+  color: #fff;
+}
+
+
+
+/* ====================================
+📱 MOBILE RESPONSIVE (≤768px)
+==================================== */
 @media (max-width: 768px) {
-  /* Header & Nav */
-  nav ul {
+  .navbar {
     flex-direction: column;
-    gap: 1em;
+    align-items: stretch;
+    gap: 0.5em;
   }
 
-  .site-title {
+  .navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1em;
+    gap: 1em;
+    background-color: #fff;
+    padding: 1em 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-link {
+    color: #333;
+    font-weight: 500;
+  }
+
+  .nav-brand .site-title {
     font-size: 1.2em;
   }
 
@@ -220,7 +306,6 @@ article td {
     padding: 0 1em;
   }
 
-  /* Article */
   article {
     padding: 1rem;
     font-size: 1rem;
@@ -248,7 +333,6 @@ article td {
     font-size: 0.95rem;
   }
 
-  /* Post Snippet */
   .post-snippet {
     margin-bottom: 1.25em;
     padding-bottom: 0.75em;
@@ -260,5 +344,16 @@ article td {
 
   .post-excerpt {
     font-size: 0.95em;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  .footer-left p,
+  .footer-right p {
+    text-align: left;
   }
 }

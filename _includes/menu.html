@@ -1,7 +1,34 @@
-<nav class="site-nav">
-  <ul>
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-top">
+    <div class="nav-brand">
+      <a href="{{ '/' | relative_url }}" class="site-title">Echo Reader</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <ul class="nav-menu" role="menubar">
     {% for item in site.nav %}
-      <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+      <li role="none">
+        <a href="{{ item.url | relative_url }}" class="nav-link" role="menuitem">{{ item.title }}</a>
+      </li>
     {% endfor %}
   </ul>
 </nav>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".nav-toggle");
+    const menu = document.querySelector(".nav-menu");
+
+    toggle.addEventListener("click", function () {
+      menu.classList.toggle("active");
+      toggle.setAttribute("aria-expanded", menu.classList.contains("active"));
+    });
+  });
+</script>

@@ -17,7 +17,6 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
       {% include menu.html %}
     </div>
   </header>
@@ -29,16 +28,20 @@
   <!-- footer>
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </footer -->
-  <footer>
-  <p>
-    &copy; {{ site.time | date: "%Y" }}
-    {{ site.title }}
-  </p>
-  <p>
-    <a href="https://digitalfootstep.blogspot.com/" target="_blank">Digital Footstep</a><br>
-    <a href="https://geargeniushub.blogspot.com/" target="_blank">Gear Genius Hub</a>
-  </p>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+    </div>
+    <div class="footer-right">
+      <p>
+        <a href="https://digitalfootstep.blogspot.com/" target="_blank">Digital Footstep</a>
+        <a href="https://geargeniushub.blogspot.com/" target="_blank">Gear Genius Hub</a>
+      </p>
+    </div>
+  </div>
 </footer>
+
 
 </body>
 </html>
