@@ -6,7 +6,8 @@ lang: "en"
 excerpt_separator: "\n\n\n"
 date_format: "%B %d, %Y"
 
-url: "https://echoreader.github.io"
+# echoreader.github.io > bytehuman.blog
+url: "https://bytehuman.blog"
 baseurl: ""  # kosong kalau di root
 
 nav:
