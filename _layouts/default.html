@@ -3,12 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title-->
   <meta name="author" content="{{ page.author | default: site.author | escape }}">
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
   <meta name="generator" content="Jekyll v{{ jekyll.version }}">
-  <meta name="google-site-verification" content="W1ZPHpSXG2UkyyVH_4lkOjhE1On-4mxCIDEJVj6ziy8" />
-  <!--link rel="canonical" href="{{ page.url | absolute_url }}"-->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   {% feed_meta %}
@@ -25,23 +22,19 @@
     {{ content }}
   </main>
 
-  <!-- footer>
-    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
-  </footer -->
   <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-left">
-      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }} — All rights reserved. </p>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }} — All rights reserved. </p>
+      </div>
+      <div class="footer-right">
+        <p>
+          <a href="https://digitalfootstep.blogspot.com/" rel="nofollow noopener" target="_blank">Digital Footstep</a>
+          <a href="https://geargeniushub.blogspot.com/" rel="nofollow noopener" target="_blank">Gear Genius Hub</a>
+        </p>
+      </div>
     </div>
-    <div class="footer-right">
-      <p>
-        <a href="https://digitalfootstep.blogspot.com/" target="_blank">Digital Footstep</a>
-        <a href="https://geargeniushub.blogspot.com/" target="_blank">Gear Genius Hub</a>
-      </p>
-    </div>
-  </div>
-</footer>
-
+  </footer>
 
 </body>
 </html>
