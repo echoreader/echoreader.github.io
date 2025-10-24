@@ -9,7 +9,8 @@ description: "Browse ByteHuman collection of articles on cultural trends, tech b
 
   {% for post in paginator.posts %}
     <article class="post-snippet">
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <!--h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2-->
+      <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
       <p class="post-date">{{ post.date | date: site.date_format }}</p>
       <p class="post-excerpt">
         {{ post.content | strip_html | truncatewords: 30 }}
