@@ -21,7 +21,7 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
-  - jekyll-sitemap  
+  #- jekyll-sitemap  
   - jekyll-seo-tag
 
 paginate: 5

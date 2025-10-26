@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bytehuman.blog/sitemap.xml
+Sitemap: https://bytehuman.blog/sitemap-index.xml
