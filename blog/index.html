@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "ByteHuman Articles — Culture, Tech Reviews & Digital Insights for the Curious Mind"
-description: "Browse ByteHuman collection of articles on cultural trends, tech breakthroughs, and digital life. From human stories to gear reviews, we decode the pulse of society and science in the modern age."
+title: "ByteHuman Articles — Culture, Tech & Insights for Curious Minds"
+description: "Explore ByteHuman articles on culture, tech, and digital life from human stories to gear reviews, decoding the pulse of modern society and innovation."
 ---
 
 <section class="blog-list">
@@ -20,7 +20,11 @@ description: "Browse ByteHuman collection of articles on cultural trends, tech b
   {% endfor %}
   {%- endcomment -%}
 
-  {% assign contents = site.pages | where: "layout", "post" | where_exp: "item", "item.path contains 'contents'" %}
+  {% assign contents = site.pages 
+  | where: "layout", "post" 
+  | where_exp: "item", "item.path contains 'contents'" 
+  | sort: "date" 
+  | reverse %}
 
   {% for post in contents %}
     <article class="post-snippet">
@@ -32,8 +36,12 @@ description: "Browse ByteHuman collection of articles on cultural trends, tech b
           Draft
         {% endif %}
       </p>
-      <p class="post-excerpt">
-        {{ post.content | strip_html | truncatewords: 30 }}
+      <p class="post-description">
+        {% if post.description %}
+          {{ post.description }}
+        {% else %}
+          {{ post.content | strip_html | truncatewords: 30 }}
+        {% endif %}
       </p>
     </article>
   {% endfor %}

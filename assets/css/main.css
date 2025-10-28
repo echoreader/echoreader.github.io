@@ -158,6 +158,16 @@ article h3 {
   color: #222;
 }
 
+article h1 + time {
+  display: block;
+  margin-top: 0.5em;
+}
+
+article time + p {
+  display: block;
+  margin-top: 1em;
+}
+
 article p {
   margin-bottom: 1rem;
 }
