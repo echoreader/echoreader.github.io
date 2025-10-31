@@ -1,4 +1,10 @@
 User-agent: *
+Disallow: /assets/
+Disallow: /drafts/
+Disallow: /tags/
+Disallow: /categories/
+Disallow: /404.html
 Allow: /
 
 Sitemap: https://bytehuman.blog/sitemap-index.xml
+Host: https://bytehuman.blog
