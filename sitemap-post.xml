@@ -4,7 +4,7 @@ permalink: /sitemap-post.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% assign posts = site.pages | where: "layout", "post" %}
+  {% assign posts = site.pages | where: "layout", "post" | sort: "date" | reverse %}
   {% for post in posts %}
   <url>
     <loc>{{ post.url | absolute_url }}</loc>

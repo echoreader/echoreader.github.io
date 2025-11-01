@@ -1,6 +1,6 @@
 ---
 title:  "How to Implement Human-Centered AI Ethics"
-description: "Navigate the future of technology with my guide to human-centered AI ethics. Learn to implement ethical AI practices that protect digital identity, ensure fairness, and build trust through transparency and accountability."
+description: "Navigate the future of technology with my guide to human-centered AI ethics. Learn to implement ethical AI practices that protect digital identity."
 layout: post
 permalink: /how-to-implement-human-centered-ai-ethics/
 date: 2025-10-18
@@ -25,7 +25,7 @@ After years of trial and error, I've consolidated the vast landscape of **AI eth
 
 *   **Data Minimization:** I always ask, "Do we *need* this data to solve the problem?" Collect only what is essential. Less data means less risk.
 *   **Explicit Consent:** Move beyond legalese. Consent should be an ongoing, informed conversation, not a one-time checkbox.
-*   Robust [**Data Governance**](https://bytehuman.blog/data-governance-strategy-example/): This is the operational backbone. It means having clear policies for how data is stored, accessed, audited, and deleted. Who has access? How is it secured? Answering these questions is foundational to **trust**.
+*   Robust <a href="{{ '/data-governance-strategy-example/' | absolute_url }}"><b>Data Governance </b></a> : This is the operational backbone. It means having clear policies for how data is stored, accessed, audited, and deleted. Who has access? How is it secured? Answering these questions is foundational to **trust**.
 
 ### 2. Relentless Pursuit of Fairness and Bias Mitigation
 

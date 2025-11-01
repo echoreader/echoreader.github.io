@@ -8,7 +8,7 @@ date: 2025-10-17
 
 I’ll never forget the meeting that made it all crystal clear. I was sitting with a client, and two VPs were arguing over a customer count. The sales VP had one number, the marketing VP had another, and both were convinced their report was "right." We spent an hour digging, only to discover they were using different definitions of what constituted an "active customer." That single meeting was costing them thousands in wasted time and misguided strategy. It was the moment I realized that without a **governance** foundation, data isn't an asset it's a liability.
 
-Many people hear "[**data governance**](https://bytehuman.blog)" and imagine a bureaucratic nightmare of red tape that stifles innovation. In my experience, it's the exact opposite. A strong **data governance strategy** is what *enables* innovation by providing trusted, reliable data. Today, I want to walk you through a real-world **data governance strategy example** that I've adapted from successful implementations. This isn't theoretical it's a practical **framework** you can use as a template to build confidence in your organization's data.
+Many people hear "**data governance**" and imagine a bureaucratic nightmare of red tape that stifles innovation. In my experience, it's the exact opposite. A strong **data governance strategy** is what *enables* innovation by providing trusted, reliable data. Today, I want to walk you through a real-world **data governance strategy example** that I've adapted from successful implementations. This isn't theoretical it's a practical **framework** you can use as a template to build confidence in your organization's data.
 
 ## What is a Data Governance Strategy, Really?
 
