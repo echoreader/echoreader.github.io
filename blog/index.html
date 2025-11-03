@@ -7,26 +7,13 @@ description: "Explore ByteHuman articles on culture, tech, and digital life from
 <section class="blog-list">
   <h1>All Posts</h1>
 
-  {%- comment -%}
-  {% for post in paginator.posts %}
-    <article class="post-snippet">
-      <!--h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2-->
-      <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
-      <p class="post-date">{{ post.date | date: site.date_format }}</p>
-      <p class="post-excerpt">
-        {{ post.content | strip_html | truncatewords: 30 }}
-      </p>
-    </article>
-  {% endfor %}
-  {%- endcomment -%}
-
-  {% assign contents = site.pages 
+  {% assign posts = site.pages 
   | where: "layout", "post" 
-  | where_exp: "item", "item.path contains 'contents'" 
+  | where_exp: "item", "item.path contains 'posts'" 
   | sort: "date" 
   | reverse %}
 
-  {% for post in contents %}
+  {% for post in posts %}
     <article class="post-snippet">
       <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
       <p class="post-date">

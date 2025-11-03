@@ -1,6 +1,3 @@
-#title: "Echo Reader"
-author: "Echo Reader"
-#description: "Echo Reader a passionate blog writer dedicated to sharing meaningful stories and perspectives across diverse niches"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
@@ -10,18 +7,10 @@ date_format: "%B %d, %Y"
 url: "https://bytehuman.blog"
 baseurl: ""  # kosong kalau di root
 
-nav:
-  - title: "Blog"
-    url: "/blog/"
-  - title: "About"
-    url: "/about/"
-
 plugins:
-
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
-  #- jekyll-sitemap  
   - jekyll-seo-tag
 
 paginate: 5
@@ -29,4 +18,11 @@ paginate_path: "/blog/page:num/"
 
 include:
   - assets
+
+kramdown:
+  # Opsi 1: Menetapkan karakter 'quot' untuk double quotes lurus
+  smart_quotes: ["lsquo", "rsquo", "quot", "quot"]
+  
+  # Opsi 2: Menonaktifkan fitur smartypants Kramdown (jika tersedia/didukung)
+  # Menggunakan Opsi 1 lebih umum untuk hanya mengontrol quotes.
 

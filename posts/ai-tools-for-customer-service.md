@@ -26,7 +26,7 @@ This is the magic that allows machines to comprehend human language. **NLP** ena
 
 ### 2. Machine Learning (ML)
 
-**Machine learning (ML)** is the engine of continuous improvement. ML algorithms analyze thousands of past interactions to learn the most effective responses, identify new common issues, and become more accurate over time. They power the **predictive analytics** that can forecast ticket volumes or guess what a customer might need next.
+{% capture python_link %}{% include link.html href="/google-machine-learning-certification-free/" rel="follow" text="<b>Machine learning (ML)</b>" %}{% endcapture %} {{ python_link | strip_newlines | strip }} is the engine of continuous improvement. ML algorithms analyze thousands of past interactions to learn the most effective responses, identify new common issues, and become more accurate over time. They power the **predictive analytics** that can forecast ticket volumes or guess what a customer might need next.
 
 ### 3. Sentiment Analysis
 

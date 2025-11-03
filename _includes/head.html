@@ -1,0 +1,35 @@
+<!-- 1. Charset & viewport -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 2. SEO meta -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="{{ page.author | default: site.author | escape }}">
+<meta name="description" content="{{ page.description | default: site.description | escape }}">
+<meta name="generator" content="Jekyll v{{ jekyll.version }}">
+
+<!-- 3. Google AdSense Script -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-6771362188294710"
+crossorigin="anonymous"></script>
+
+<!-- 4. Styles & favicon -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<!-- 5. Jekyll SEO & feed/Cannonical Automatic -->
+{% feed_meta %}
+{% seo %}
+
+<!-- 6. Cloudflare beacon script -->
+<script>
+if (window.location.search.includes("no-track")) {
+    localStorage.setItem("skipAnalytics", "true");
+}
+if (localStorage.getItem("skipAnalytics") !== "true") {
+    const cfScript = document.createElement("script");
+    cfScript.defer = true;
+    cfScript.src = "https://static.cloudflareinsights.com/beacon.min.js";
+    cfScript.setAttribute("data-cf-beacon", '{"token": "d7376f08c40c4e51b383102074fa4f0c"}');
+    document.head.appendChild(cfScript);
+}
+</script>

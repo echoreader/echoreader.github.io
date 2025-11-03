@@ -1,0 +1,6 @@
+{% capture site_url %}{% include site_url.html %}{% endcapture %}
+{% assign rel_value = include.rel %}
+{% assign full_link = '<a href="' | append: site_url | append: include.href | append: '"' %}
+{% if rel_value %}{% assign full_link = full_link | append: ' rel="' | append: rel_value | append: '"' %}{% endif %}
+{% assign full_link = full_link | append: ' target="_blank" class="external">' | append: include.text | append: '</a>' %}
+{{ full_link | strip_newlines | strip }}

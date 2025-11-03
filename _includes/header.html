@@ -1,7 +1,11 @@
+{% capture site_url %}
+  {% include site_url.html %}
+{% endcapture %}
+{% assign site_url = site_url | strip %}
 <nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="navbar-top">
     <div class="nav-brand">
-      <a href="{{ '/' | absolute_url }}" class="site-title">Bytehuman</a>
+      <a href="{{ site_url }}" class="site-title">Bytehuman</a>
     </div>
 
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -20,12 +24,14 @@
   </ul-->
 
   <ul class="nav-menu" role="menubar">
-    {% for item in site.nav %}
-      <li role="none">
-        <a href="{{ item.url | absolute_url }}" class="nav-link" role="menuitem">{{ item.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+  <li role="none">
+    <a href="{{ site_url }}/blog/" class="nav-link" role="menuitem">Blog</a>
+  </li>
+  <li role="none">
+    <a href="{{ site_url }}/about/" class="nav-link" role="menuitem">About</a>
+  </li>
+</ul>
+
 </nav>
 
 <script>
