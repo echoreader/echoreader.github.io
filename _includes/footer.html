@@ -2,13 +2,18 @@
   {% include site_url.html %}
 {% endcapture %}
 {% assign site_url = site_url | strip %}
-<div class="footer-left">
-    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }} — All rights reserved. </p>
-</div>
-<div class="footer-right">
-    <p>
-        <a href="{{ site_url }}/contact/">Contact</a> 
-        <a href="{{ site_url }}/disclaimer/">Disclaimer</a>  
-        <a href="{{ site_url }}/privacy-policy/">Privacy Policy</a>
-    </p>
-</div>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-left">
+            <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }} — All rights reserved. </p>
+        </div>
+        <div class="footer-right">
+            <p>
+                <a href="{{ site_url }}/contact/">Contact</a> 
+                <a href="{{ site_url }}/disclaimer/">Disclaimer</a>  
+                <a href="{{ site_url }}/privacy-policy/">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</footer>

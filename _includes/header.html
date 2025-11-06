@@ -2,37 +2,33 @@
   {% include site_url.html %}
 {% endcapture %}
 {% assign site_url = site_url | strip %}
-<nav class="navbar" role="navigation" aria-label="Main navigation">
-  <div class="navbar-top">
-    <div class="nav-brand">
-      <a href="{{ site_url }}" class="site-title">Bytehuman</a>
-    </div>
 
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <!--span></span-->
-      <span></span>
-      <span></span>
-    </button>
-  </div>
+<header class="site-header">
+  <div class="header-inner">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar-top">
+        <div class="nav-brand">
+          <a href="{{ site_url }}" class="site-title">Bytehuman</a>
+        </div>
 
-  <!--ul class="nav-menu" role="menubar">
-    {% for item in site.nav %}
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <ul class="nav-menu" role="menubar">
       <li role="none">
-        <a href="{{ item.url | relative_url }}" class="nav-link" role="menuitem">{{ item.title }}</a>
+        <a href="{{ site_url }}/blog/" class="nav-link" role="menuitem">Blog</a>
       </li>
-    {% endfor %}
-  </ul-->
+      <li role="none">
+        <a href="{{ site_url }}/about/" class="nav-link" role="menuitem">About</a>
+      </li>
+    </ul>
 
-  <ul class="nav-menu" role="menubar">
-  <li role="none">
-    <a href="{{ site_url }}/blog/" class="nav-link" role="menuitem">Blog</a>
-  </li>
-  <li role="none">
-    <a href="{{ site_url }}/about/" class="nav-link" role="menuitem">About</a>
-  </li>
-</ul>
-
-</nav>
+    </nav>
+  </div>
+</header>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
