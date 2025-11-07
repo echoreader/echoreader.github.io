@@ -1,0 +1,36 @@
+{% capture site_url %}
+  {% include site_url.html %}
+{% endcapture %}
+{% assign site_url = site_url | strip %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.title | escape }}",
+  "description": "{{ page.description | escape }}",
+  "image": "{{ page.image | default: '' }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  {% if page.last_modified_at %}
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+  {% endif %}
+  "url": "{{ site_url }}{{ page.url }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.author | default: 'Echo Reader' }}",
+    "url": "{{ site_url }}/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Echo Reader – Strategic Hub for Niche Blogs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site_url }}/favicon.ico"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site_url }}{{ page.url }}"
+  }
+}
+</script>

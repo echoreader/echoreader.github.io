@@ -1,0 +1,27 @@
+{% capture site_url %}
+  {% include site_url.html %}
+{% endcapture %}
+{% assign site_url = site_url | strip %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage", 
+  "name": "About Echo Reader – Modular Content Architect",
+  "description": "Echo Reader is a modular content strategist behind niche blogs in finance, education, and technology.",
+  "url": "{{ site_url }}/about/",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Echo Reader",
+    "description": "Content strategist, SEO expert, and multi-niche blog creator specializing in optimization and storytelling.",
+    "jobTitle": "Modular Content Architect",
+    "image": "", 
+    "url": "{{ site_url }}/about/", 
+    "sameAs": [
+      "https://www.linkedin.com/in/echo-reader/",
+      "https://www.facebook.com/profile.php?id=61569116903478",
+      "https://x.com/echo_reader"
+    ]
+  }
+}
+</script>

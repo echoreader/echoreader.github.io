@@ -4,6 +4,7 @@ description: "Navigate the future of technology with my guide to human-centered 
 layout: post
 permalink: /how-to-implement-human-centered-ai-ethics/
 date: 2025-10-18
+schema: article
 ---
 I still remember the first time an algorithm felt… personal. A music streaming service suggested a playlist so perfectly tailored to my mood that it was unsettling. It knew me, but I had no idea how it worked, what it knew, or what it would do with that intimate knowledge. That moment of wonder was quickly followed by a knot of anxiety in my stomach. As someone who has worked in tech for years, I saw a fundamental disconnect: we were building systems that could understand human behavior without being bound by human values.
 

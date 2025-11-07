@@ -1,0 +1,23 @@
+{
+  "name": "bytehuman-blog",
+  "version": "1.0.0",
+  "description": "Static blog for bytehuman.blog built with Jekyll",
+  "author": "Echo Reader",
+  "scripts": {
+    "dev": "vite",
+    "build:css": "unocss '_layouts/**/*.html' '_includes/**/*.html' '*.html' 'posts/**/*.md' -o assets/css/unocss.css"
+  },
+  "devDependencies": {
+    "unocss": "^66.5.4",
+    "vite": "^7.2.1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/echoreader/bytehuman.blog"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

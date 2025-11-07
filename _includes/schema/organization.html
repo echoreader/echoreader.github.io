@@ -1,0 +1,25 @@
+{% capture site_url %}
+  {% include site_url.html %}
+{% endcapture %}
+{% assign site_url = site_url | strip %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Echo Reader – Strategic Hub for Niche Blogs",
+  "url": "{{ site_url }}",
+  "logo": "{{ site_url }}/favicon.ico",
+  "description": "Echo Reader connects niche blogs in finance, education, and tech built to inform, empower, and inspire across industries.",
+  "sameAs": [
+    "https://www.linkedin.com/in/echo-reader/",
+    "https://www.facebook.com/profile.php?id=61569116903478",
+    "https://x.com/echo_reader"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "tom.bisnis@gmail.com"
+  }
+}
+</script>

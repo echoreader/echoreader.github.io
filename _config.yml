@@ -7,17 +7,18 @@ date_format: "%B %d, %Y"
 url: "https://bytehuman.blog"
 baseurl: ""  # kosong kalau di root
 
-plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-seo-tag
+#plugins:
+  #- jekyll-feed
+  #- jekyll-gist
+  #- jekyll-paginate
+  #- jekyll-seo-tag
 
-paginate: 5
-paginate_path: "/blog/page:num/"
+#paginate: 5
+#paginate_path: "/blog/page:num/"
 
 include:
   - assets
+  - assets/css/unocss.css
 
 kramdown:
   # Opsi 1: Menetapkan karakter 'quot' untuk double quotes lurus

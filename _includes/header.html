@@ -3,7 +3,40 @@
 {% endcapture %}
 {% assign site_url = site_url | strip %}
 
-<header class="site-header">
+<header class="w-full bg-gray-100 shadow-md fixed top-0 left-0 z-50">
+  <div class="max-w-4xl mx-auto flex items-center justify-between px-4 py-3">
+    <!-- Brand -->
+    <a href="{{ site_url }}" class="text-xl font-bold text-gray-800 no-underline">Bytehuman</a>
+
+    <!-- Hamburger -->
+    <button id="menu-toggle" class="lg:hidden flex flex-col gap-1 p-2 text-gray-700" aria-label="Open menu">
+      <span class="w-6 h-0.5 bg-gray-700"></span>
+      <span class="w-6 h-0.5 bg-gray-700"></span>
+    </button>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex gap-6 items-center">
+      <a href="{{ site_url }}/blog/" class="text-gray-700 hover:text-blue-600 no-underline">Blog</a>
+      <a href="{{ site_url }}/about/" class="text-gray-700 hover:text-blue-600 no-underline">About</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-gray-50 text-gray-800">
+    <div class="max-w-6xl mx-auto flex flex-col px-4 py-2">
+      <a href="{{ site_url }}/blog/" class="py-2 no-underline hover:text-blue-600">Blog</a>
+      <a href="{{ site_url }}/about/" class="py-2 no-underline hover:text-blue-600">About</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.getElementById('menu-toggle').onclick = () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  };
+</script>
+
+<!--header class="site-header">
   <div class="header-inner">
     <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="navbar-top">
@@ -40,4 +73,4 @@
       toggle.setAttribute("aria-expanded", menu.classList.contains("active"));
     });
   });
-</script>
+</script-->

@@ -3,7 +3,22 @@
 {% endcapture %}
 {% assign site_url = site_url | strip %}
 
-<footer class="site-footer">
+<footer class="w-full bg-black text-white py-6 mt-12">
+  <div class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+    <!-- Kiri: Copyright -->
+    <p class="text-sm">© 2025 bytehuman.blog — All rights reserved.</p>
+
+    <!-- Kanan: Menu -->
+    <div class="flex flex-col items-start md:items-end gap-2 text-sm">
+      <a href="{{ site_url }}/contact/" class="no-underline text-white hover:text-gray-300">Contact</a>
+      <a href="{{ site_url }}/disclaimer/" class="no-underline text-white hover:text-gray-300">Disclaimer</a>
+      <a href="{{ site_url }}/privacy-policy/" class="no-underline text-white hover:text-gray-300">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+
+<!--footer class="site-footer">
     <div class="footer-inner">
         <div class="footer-left">
             <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }} — All rights reserved. </p>
@@ -16,4 +31,4 @@
             </p>
         </div>
     </div>
-</footer>
+</footer-->
